@@ -1,0 +1,41 @@
+@viewport{
+    width:device-width;
+    zoom:1;
+    min-zoom:1;
+    max-zoom:1;
+    user-scalable:no;
+}
+body{
+  position:relative;
+  margin:10px;
+  padding:0 auto;
+}
+canvas {
+  border: 2px solid black;
+  left:0px;
+  position:absolute;
+}
+@media (min-device-width: 500px) and (orientation:landscape){
+    #options{
+        position:absolute;
+        top:0px;
+        left:320px;
+    }
+}
+@media (orientation:portrait){
+    #options{
+        position:absolute;
+        top:300px;
+        left:0px;
+    }
+}
+#color{
+/*    float:left;*/
+}
+#colorpreview{
+    display:inline;
+    background-color:#000000;
+}
+#shape{
+    clear:both;
+}
