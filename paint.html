@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>JS Paint</title>
+     <link rel="stylesheet" type="text/css" href="css/paint.css" /> 
+     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,
+    maximum-scale=1, user-scalable=no">
+     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+     <script src="js/paint.js"></script>
+     <!-- Mobile compatible touch device -->
+</head>
+<body onload="init();">
+  
+  <canvas id="mycanvas" width="300px" height="300px">
+  </canvas>
+  <div id="options">
+    <p>Size: <input type="range" min="10" max="200" value="42" id="size" onchange="changeSize();"/></p>
+    <p id="color">Color: <input type="color" name="color" id="colorsee" onchange="changeColor();"/></p>
+    <!-- Displayed if the color input is not supported by the browser -->
+    <div style="display:none;" id="mobileSelector"><p>Sélectionner une couleur : 
+    <p><input type="button" id="colorButton" onclick="updateColor('#FF0000');" value="rouge" /><input type="button" id="colorButton" onclick="updateColor('#00FF00');" value="vert" /><input type="button" id="colorButton" onclick="updateColor('#0000FF');" value="bleu" /><input type="button" id="colorButton" onclick="updateColor('#FFFFFF');" value="blanc" /><input type="button" id="colorButton" onclick="updateColor('#000000');" value="noir"/></p></div>
+    <p id="shape">Shape: 
+      <select name="shapes" id="shapes" onchange="changeShape();" autocomplete="off">
+        <option value="square" selected="selected">Square</option>
+        <option value="circle">Circle</option>
+        <option value="star">Star</option>
+      </select>
+    </p>
+  </div>
+</body>
+</html>
