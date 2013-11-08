@@ -27,7 +27,7 @@ function init() {
         colorp.addEventListener('click',showColor);
         var newimg = document.createElement('img');
         newimg.setAttribute('id','colorpreview');
-        newimg.setAttribute('src','images/selector.png');
+        newimg.setAttribute('src','img/selector.png');
         colorp.appendChild(newimg);
         var old = document.querySelector('#colorsee');
         document.querySelector('#color').removeChild(old);
