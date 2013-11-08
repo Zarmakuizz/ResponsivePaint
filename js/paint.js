@@ -55,7 +55,11 @@ function changeColor() {
     ctx.fillStyle=color;
 }
 function showColor(){
-    $("#mobileSelector").show(500);
+    if(window.jQuery){
+        $("#mobileSelector").show(500);
+    }else{
+        document.querySelector("#mobileSelector").style.display = "block";
+    }
 }
 /* Triggered only if the color selector is not applied */
 function updateColor(color) {
